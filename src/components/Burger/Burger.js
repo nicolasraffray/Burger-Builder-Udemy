@@ -3,12 +3,20 @@ import styles from './Burger.module.css'
 import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
 const burger = (props) => {
-  return(<div className={styles.Burger}>
-    <BurgerIngredient type={"bread-top"}/>  
-    <BurgerIngredient type={"meat"}/>  
-    <BurgerIngredient type={"cheese"}/>  
-    <BurgerIngredient type={"bread-bottom"}/>  
-  </div>)
+  const ingredients = Object.keys(props.ingredient).map(ingredientKey => {
+    return [...Array(props.ingredient[ingredientKey])].map((_, i) => {
+      return <BurgerIngredient key={ingredientKey + i} type={ingredientKey} />
+    })
+  })
+  console.log(props.ingredient)
+  console.log(ingredients)
+  return(
+    <div className={styles.Burger}>
+      <BurgerIngredient type={"bread-top"}/>  
+      {ingredients}
+      <BurgerIngredient type={"bread-bottom"}/>  
+    </div>
+  )
 }
 
 export default burger; 
