@@ -7,8 +7,8 @@ const burger = (props) => {
     return [...Array(props.ingredient[ingredientKey])].map((_, i) => {
       return <BurgerIngredient key={ingredientKey + i} type={ingredientKey} />
     })
-  })
-  console.log(props.ingredient)
+  }).reduce((prevEl, nextEl) => {return prevEl.concat(nextEl)}, [])
+  
   console.log(ingredients)
   return(
     <div className={styles.Burger}>
