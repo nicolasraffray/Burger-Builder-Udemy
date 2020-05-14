@@ -9,7 +9,7 @@ const orderSummary = (props) => {
   </li>
     )
   })
-  return(
+  return (
     <Aux>
       <h3>Your Order</h3>
         <p>Burger Contents: </p>
