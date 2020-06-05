@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import Aux from "../../hoc/Aux/Aux";
-import Burger from "../Burger/Burger";
-import BuildControls from "../Burger/BuidControls/BuildControls";
-import Modal from "../UI/Modal/Modal";
-import OrderSummary from "../Burger/OrderSummary/OrderSummary";
-import axios from "../../axios-orders";
-import Spinner from "../UI/Spinner/Spinner";
-import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
+import Aux from "../../../hoc/Aux/Aux";
+import Burger from "../../Burger/Burger";
+import BuildControls from "../../Burger/BuidControls/BuildControls";
+import Modal from "../../UI/Modal/Modal";
+import OrderSummary from "../../Burger/OrderSummary/OrderSummary";
+import axios from "../../../axios-orders";
+import Spinner from "../../UI/Spinner/Spinner";
+import withErrorHandler from "../../../hoc/withErrorHandler/withErrorHandler";
 
 const INGREDIENT_PRICES = {
   salad: 0.1,
